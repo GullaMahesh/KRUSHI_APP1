@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_Home"
+        android:title="HOME" />
+    <item
+        android:id="@+id/nav_addequipment"
+        android:title="ADD EQUIPMENT" />
+
+    <item
+        android:id="@+id/nav_myequipment"
+        android:title="MY EQUIPMENT" />
+    <item
+        android:id="@+id/nav_categories"
+        android:title="CATOGORIES" />
+    <item
+        android:id="@+id/nav_callcentersupport"
+        android:title="CALL CENTER SUPPORT" />
+    <item
+        android:id="@+id/nav_faq"
+        android:title="FAQ" />
+    <item
+        android:id="@+id/nav_settings"
+        android:title="SETTINGS" />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Logout" />
+</menu>

@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="app_name">KRUSHI_APP1</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="Register">Register</string>
+    <string name="LOGIN">LOGIN</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_home_fragment">Hello home fragment</string>
+    <string name="hello_logout_fragment">Hello logout fragment</string>
+    <string name="hello_settings_fragment">Hello settings fragment</string>
+    <string name="hello_faq_fragment">Hello faq fragment</string>
+    <string name="hello_callcenter_fragment">Hello callcenter fragment</string>
+    <string name="hello_category_fragment">Hello category fragment</string>
+    <string name="hello_myequip_fragment">Hello equip fragment</string>
+    <string name="hello_addequip_fragment">Hello addequip fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_Register_fragment">Hello register fragment</string>
+    <string name="hello_login_fragment">Hello login fragment</string>
+</resources>
