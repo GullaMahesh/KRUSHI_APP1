@@ -3,10 +3,18 @@ package com.example.krushi_app1;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,11 +62,30 @@ public class Addequip_Fragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+EditText t1;
+    EditText t2;
+    Button b;
+    private FirebaseDatabase db= FirebaseDatabase.getInstance();
+    private DatabaseReference root = db.getReference();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_addequip_, container, false);
+
+        View view= inflater.inflate(R.layout.fragment_addequip_, container, false);
+
+        t1=view.findViewById(R.id.t1);
+        t2=view.findViewById(R.id.t2);
+        b=view.findViewById(R.id.button);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HashMap<String,Object> m= new HashMap<String , Object>();
+                m.put("name",t1.getText().toString());
+                m.put("age",t2.getText().toString());
+                root.setValue(m);
+            }
+        });
+        return view;
     }
 }

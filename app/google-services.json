@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "494780826128",
+    "project_id": "krushi-app1",
+    "storage_bucket": "krushi-app1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494780826128:android:32c8425df0f3b86ed6c095",
+        "android_client_info": {
+          "package_name": "com.example.krushi_app1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494780826128-ov08e2pqhfsg7stqp2u5mjb3ddv97d3j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIDVHjYNiAIg2vXeqRjM-QkaE-Eg51HhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494780826128-ov08e2pqhfsg7stqp2u5mjb3ddv97d3j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
