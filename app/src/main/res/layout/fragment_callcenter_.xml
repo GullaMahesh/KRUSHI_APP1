@@ -4,22 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".callcenter_Fragment">
+    tools:context=".Addequip_Fragment"
+    android:background="@color/white">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_callcenter_fragment"
-        android:textColor="@color/yellow"
-        android:gravity="center"
-        android:background="@color/teal_200"/>
 
-    <Button
-        android:id="@+id/button2"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="192dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="200dp"
+        android:text="Equipment Name:-"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:text="Equipment Company:-"
+        android:layout_marginTop="250dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="240dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="300dp"
+        android:text="Equipment Ownner:-"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="175dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="350dp"
+        android:text="Equipment Rent:-"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Address:-"
+        android:layout_marginTop="400dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone No:-"
+        android:layout_marginTop="500dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:-"
+        android:layout_marginTop="550dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:-"
+        android:layout_marginTop="600dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/simpleEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:hint="Enter Your Name Here"
+        android:textColorHint="#0f0" />
 
     <ImageView
         android:id="@+id/imageView2"
