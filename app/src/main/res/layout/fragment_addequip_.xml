@@ -16,9 +16,10 @@
 
         <ImageView
             android:id="@+id/img"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
+            android:layout_width="150dp"
+            android:layout_height="138dp"
             app:srcCompat="@drawable/ic_launcher_background" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,7 +32,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/t4"
-        android:hint="Roll No."
+        android:hint="Equipment Name"
         android:textColor="#000"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
@@ -40,7 +41,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/t1"
-        android:hint="Your Name"
+        android:hint="Equipment Company"
         android:textColor="#000"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
@@ -49,7 +50,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/t2"
-        android:hint="Your Course"
+        android:hint="Equipment Owner"
         android:textColor="#000"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
@@ -58,7 +59,39 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/t3"
-        android:hint="Your Contact"
+        android:hint="Equipment Rent"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/t9"
+        android:hint="Address"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/t5"
+        android:hint="Phone No."
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/t6"
+        android:hint="Email"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/t7"
+        android:hint="Status"
         android:textColor="#000"
         android:layout_marginTop="10dp"
         android:textSize="20sp"/>
