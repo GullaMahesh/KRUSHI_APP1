@@ -109,7 +109,6 @@ EditText t1;
                                 intent.setType("image/*");
                                 startActivityForResult(Intent.createChooser(intent,"Select Image File"),1);
                             }
-
                             @Override
                             public void onPermissionDenied(PermissionDeniedResponse response) {
 
