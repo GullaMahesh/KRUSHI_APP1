@@ -86,44 +86,7 @@ public class catogories_Fragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        img=(ImageView)findViewById(R.id.img);
-        signup=(Button)findViewById(R.id.upload);
-        browse=(Button)findViewById(R.id.browse);
 
-        browse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Dexter.withActivity(MainActivity.this)
-                        .withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                        .withListener(new PermissionListener() {
-                            @Override
-                            public void onPermissionGranted(PermissionGrantedResponse response)
-                            {
-                                Intent intent=new Intent(Intent.ACTION_PICK);
-                                intent.setType("image/*");
-                                startActivityForResult(Intent.createChooser(intent,"Select Image File"),1);
-                            }
-
-                            @Override
-                            public void onPermissionDenied(PermissionDeniedResponse response) {
-
-                            }
-
-                            @Override
-                            public void onPermissionRationaleShouldBeShown(PermissionRequest permission, PermissionToken token) {
-                                token.continuePermissionRequest();
-                            }
-                        }).check();
-            }
-        });
-
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                uploadtofirebase();
-            }
-        });
     }
 
     @Override

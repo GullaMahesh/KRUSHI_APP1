@@ -76,7 +76,7 @@ EditText t1;
 
         t1=view.findViewById(R.id.t1);
         t2=view.findViewById(R.id.t2);
-        b=view.findViewById(R.id.button);
+       // b=view.findViewById(R.id.button);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
