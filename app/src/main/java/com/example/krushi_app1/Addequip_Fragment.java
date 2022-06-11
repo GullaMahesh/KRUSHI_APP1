@@ -99,7 +99,6 @@ EditText t1;
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Dexter.withContext(getContext())
                 .withPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
                         .withListener(new PermissionListener() {
