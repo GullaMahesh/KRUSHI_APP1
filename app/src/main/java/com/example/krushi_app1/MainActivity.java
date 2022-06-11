@@ -15,15 +15,12 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
     NavigationView nav;
     ActionBarDrawerToggle toggle;
     DrawerLayout drawerLayout;
-
-    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -41,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        mAuth = FirebaseAuth.getInstance();
         getSupportFragmentManager().beginTransaction().replace(R.id.container,new home_fragment()).commit();
         nav.setCheckedItem(R.id.nav_Home);
 
