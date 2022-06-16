@@ -1,6 +1,7 @@
 package com.example.krushi_app1;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -9,6 +10,10 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -16,11 +21,16 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.io.InputStream;
+
 public class MainActivity extends AppCompatActivity {
 
     NavigationView nav;
     ActionBarDrawerToggle toggle;
     DrawerLayout drawerLayout;
+    ImageView img;
+    Uri filepath;
+    Bitmap bitmap;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -85,4 +95,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+
+
 }
