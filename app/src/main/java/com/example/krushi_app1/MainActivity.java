@@ -20,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.io.InputStream;
 
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView img;
     Uri filepath;
     Bitmap bitmap;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -39,8 +42,10 @@ public class MainActivity extends AppCompatActivity {
         //ImageView s= (ImageView) findViewById(R.id.image_view);
        // s.setY(0);
       //  s.setX(-100);
+
         Toolbar toolbar=(Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mAuth = FirebaseAuth.getInstance();
 
         nav=(NavigationView)findViewById(R.id.navmenu);
         drawerLayout=(DrawerLayout)findViewById(R.id.drawer);
@@ -63,8 +68,16 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_addequipment:
-                        temp=new Addequip_Fragment();
-                        break;
+                        FirebaseUser fbuser= mAuth.getCurrentUser();
+                        if(fbuser!=null) {
+                            temp = new Addequip_Fragment();
+                            break;
+                        }
+                        else
+                        {
+                            temp=new addequip2_fragment();
+                            break;
+                        }
 
                     case R.id.nav_myequipment:
                         temp=new myequip_Fragment();

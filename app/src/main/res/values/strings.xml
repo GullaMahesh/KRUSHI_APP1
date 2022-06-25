@@ -17,4 +17,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_Register_fragment">Hello register fragment</string>
     <string name="hello_login_fragment">Hello login fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="PLEASELOGIN">PLEASE LOGIN</string>
 </resources>
