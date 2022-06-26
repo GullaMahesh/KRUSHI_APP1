@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -27,6 +28,13 @@ public class adapter extends FirebaseRecyclerAdapter<model,adapter.myviewholder>
         holder.Rent.setText(model.getEqrent());
         holder.status.setText(model.getStatus());
         Glide.with(holder.img1.getContext()).load(model.getPimage()).into(holder.img1);
+        holder.view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity activity=(AppCompatActivity) view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.container,new Expandfragment(model.getEqname(),model.getEqowner(),model.getEqrent(),model.getStatus(),model.getPimage(),model.getPhone())).addToBackStack(null).commit();
+            }
+        });
 
     }
 
@@ -43,6 +51,7 @@ public class adapter extends FirebaseRecyclerAdapter<model,adapter.myviewholder>
         TextView owner;
         TextView Rent;
         TextView status;
+        View view;
         public myviewholder(@NonNull View itemView) {
             super(itemView);
 
@@ -51,6 +60,7 @@ public class adapter extends FirebaseRecyclerAdapter<model,adapter.myviewholder>
             owner=itemView.findViewById(R.id.owner);
             Rent=itemView.findViewById(R.id.Rent);
             status=itemView.findViewById(R.id.status);
+            view=itemView;
         }
     }
 }

@@ -1,56 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp"
-    android:elevation="8dp"
-    app:cardUseCompatPadding="true">
+    android:layout_height="match_parent"
+    tools:context=".Expandfragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
-        android:id="@+id/singlelayout"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_marginLeft="100dp"
             android:src="@mipmap/ic_launcher"
-            android:id="@+id/img1"
+            android:id="@+id/imageholder"
             />
-
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/nameholder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/img1"
+            android:layout_below="@+id/imageholder"
             android:text="Name"
             android:layout_marginLeft="150dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/owner"
+            android:id="@+id/ownerholder"
             android:text="owner"
-            android:layout_below="@+id/name"
+            android:layout_below="@+id/nameholder"
             android:layout_marginLeft="150dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Rent"
-            android:layout_below="@id/owner"
+            android:id="@+id/Rentholder"
+            android:layout_below="@id/ownerholder"
             android:text="Rent"
             android:layout_marginLeft="150dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/status"
+            android:id="@+id/statusholder"
             android:text="status"
-            android:layout_below="@id/Rent"
+            android:layout_below="@id/Rentholder"
+            android:layout_marginLeft="150dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneholder"
+            android:text="phone"
+            android:layout_below="@id/statusholder"
             android:layout_marginLeft="150dp"
             />
 
     </RelativeLayout>
-</androidx.cardview.widget.CardView>
+</FrameLayout>
