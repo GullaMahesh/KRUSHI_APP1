@@ -77,14 +77,14 @@ EditText eqname;
         img=view.findViewById(R.id.img);
         b=view.findViewById(R.id.submit);
         b2=view.findViewById(R.id.browse);
-        eqname=view.findViewById(R.id.t4);
-        eqcompany=view.findViewById(R.id.t1);
-        eqowner=view.findViewById(R.id.t2);
-        eqrent=view.findViewById(R.id.t3);
-        address=view.findViewById(R.id.t8);
-        phone=view.findViewById(R.id.t5);
-        email=view.findViewById(R.id.t6);
-        status=view.findViewById(R.id.t7);
+        eqname=view.findViewById(R.id.t1);
+        eqcompany=view.findViewById(R.id.t2);
+        eqowner=view.findViewById(R.id.t3);
+        eqrent=view.findViewById(R.id.t4);
+        address=view.findViewById(R.id.t5);
+        phone=view.findViewById(R.id.t6);
+        email=view.findViewById(R.id.t7);
+        status=view.findViewById(R.id.t8);
        b2.setOnClickListener(
                new View.OnClickListener() {
           @Override

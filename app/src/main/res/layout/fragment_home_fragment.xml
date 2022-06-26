@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,11 +7,12 @@
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
+        android:id="@+id/rl1"
         android:layout_width="match_parent"
         android:layout_height="115dp"
 
-        android:background="#8BC34A"
-        >
+        android:background="#8BC34A">
+
         <Button
             android:id="@+id/Button1"
             android:layout_width="wrap_content"
@@ -51,4 +52,14 @@
 
     </RelativeLayout>
 
-</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recview"
+        android:layout_width="match_parent"
+        android:layout_height="617dp"
+        android:layout_alignBottom="@id/rl1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="114dp"
+        android:layout_marginBottom="0dp" />
+
+</RelativeLayout>

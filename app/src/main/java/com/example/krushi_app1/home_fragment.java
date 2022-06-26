@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +13,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class home_fragment extends Fragment {
@@ -20,6 +24,8 @@ public class home_fragment extends Fragment {
 
 Button b1;
 Button b2;
+RecyclerView recview;
+adapter adapte;
     private FirebaseAuth mAuth;
     public home_fragment() {
         // Required empty public constructor
@@ -39,16 +45,16 @@ Button b2;
         b1=view.findViewById(R.id.Button1);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
-            // User is signed in
+
             b1.setVisibility(View.GONE);
             b2.setVisibility(View.GONE);
         } else {
-            // No user is signed in
+
 
 
         }
 
-    //    b1=view.findViewById(R.id.Button1);
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,7 +68,7 @@ Button b2;
         });
 
 
-     //   b2=view.findViewById(R.id.Button2);
+
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,6 +79,34 @@ Button b2;
                 fm1.commit();
             }
         });
+
+
+
+        //Recycler View
+
+        recview=(RecyclerView)view.findViewById(R.id.recview);
+        recview.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        FirebaseRecyclerOptions<model> options =
+                new FirebaseRecyclerOptions.Builder<model>()
+                     .setQuery(FirebaseDatabase.getInstance().getReference(), model.class)
+                        .build();
+
+       adapte=new adapter(options);
+       recview.setAdapter(adapte);
     return view;
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        adapte.startListening();
+    }
+
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        adapte.stopListening();
+    }
+
 }
