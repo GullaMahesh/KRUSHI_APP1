@@ -8,17 +8,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.SearchView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
-
+//import androidx.appcompat.widget.SearchView;
 public class home_fragment extends Fragment {
 
 
@@ -94,6 +98,7 @@ adapter adapte;
 
        adapte=new adapter(options);
        recview.setAdapter(adapte);
+        setHasOptionsMenu(true);
     return view;
     }
     @Override
@@ -107,6 +112,38 @@ adapter adapte;
     public void onStop() {
         super.onStop();
         adapte.stopListening();
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.main_menu,menu);
+        MenuItem item=menu.findItem(R.id.search);
+        SearchView searchview= (SearchView) item.getActionView();
+        searchview.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                processearch(s);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                processearch(s);
+                return false;
+            }
+        });
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+    private void processearch(String s)
+    {
+        FirebaseRecyclerOptions<model> options =
+                new FirebaseRecyclerOptions.Builder<model>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().orderByChild("eqname").startAt(s).endAt(s+"\uf8ff"), model.class)
+                        .build();
+        adapte=new adapter(options);
+        adapte.startListening();
+        recview.setAdapter(adapte);
+
     }
 
 }

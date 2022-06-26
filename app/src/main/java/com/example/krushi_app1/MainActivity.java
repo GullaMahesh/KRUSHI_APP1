@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -15,13 +16,17 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.InputStream;
 
@@ -34,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     Uri filepath;
     Bitmap bitmap;
     FirebaseAuth mAuth;
+    adapter adapte;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -108,7 +116,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
 
 }
