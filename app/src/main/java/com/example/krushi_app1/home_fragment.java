@@ -14,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.SearchView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -116,7 +115,7 @@ adapter adapte;
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.main_menu,menu);
+        inflater.inflate(R.menu.search_manu,menu);
         MenuItem item=menu.findItem(R.id.search);
         SearchView searchview= (SearchView) item.getActionView();
         searchview.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
